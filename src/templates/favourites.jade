@@ -1,0 +1,10 @@
+div(ng-controller="FavouriteFilmsController as ctrl")
+    div(class="row")
+        div(class="col-lg-12")
+            a(class="btn btn-primary" ui-sref="films") Go Back
+    div(class="row favourites")
+        div(class="col-sm-6 col-md-3" ng-repeat="film in user.favourites")
+            div(class="thumbnail")
+                img(src="{{film.poster}}" alt="film.title")
+                div(class="caption")
+                    div(class="film-title") {{film.title}}

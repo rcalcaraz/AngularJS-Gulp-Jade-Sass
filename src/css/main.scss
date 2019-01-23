@@ -1,0 +1,64 @@
+body {
+	margin-top: 100px; 
+}
+
+.search-form{
+    margin-bottom: 50px;
+
+    input{
+        max-width: 80%;
+        display: inline;
+    }
+    button{
+        margin-left: 10px;
+        max-width: 20%;
+        display: inline;
+    }
+}
+
+.login-form{
+    text-align: right;
+    input{
+        max-width: 40%;
+        margin-right: 10px;
+    }
+}
+
+.thumbnail{
+    min-height: 400px;
+    text-align: center;
+    img{
+        height: 200px;
+    }
+    h3{
+        font-size: 18px;
+        height: 40px;
+    }
+    p{
+        height: 50px;
+    }
+    a:first-child{
+        margin-right: 10px;
+    }
+}
+
+.film-details{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    img{
+        max-width: 100%;
+    }
+}
+
+.favourites{
+    margin-top: 50px;
+    .thumbnail{
+        min-height: initial;
+    }
+    img{
+        height: 200px;
+    }
+    .caption{
+        height: 50px;
+    }
+}

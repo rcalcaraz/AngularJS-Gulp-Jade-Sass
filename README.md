@@ -10,6 +10,7 @@ Aplicación básica con un login simulado para buscar películas y elegir alguna
 - Usuarios almacenados en el sessionstorage
 - Bootstrap 3
 - Jade
+- Sass
 - Versión de JavaScript es6
 - Gestión de dependencias con Bower
 - Gestión de flujo de trabajo con gulp

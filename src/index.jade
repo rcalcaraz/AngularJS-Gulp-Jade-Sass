@@ -1,0 +1,44 @@
+doctype html
+html(ng-app='myApp')
+    head
+        title Basic Movie App
+        link(href="./bower_components/bootstrap/dist/css/bootstrap.css", rel='stylesheet')
+        link(href='./css/main.css', rel='stylesheet')
+    body(ng-controller='HomeController as ctrl')
+
+        nav(class="navbar navbar-fixed-top navbar-inverse" role="navigation")
+            div(class="container")
+                div(class="navbar-header")
+                    button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse")
+                        span(class="sr-only") Toggle navigation
+                        span(class="icon-bar")
+                        span(class="icon-bar")
+                        span(class="icon-bar")
+                    a(class="navbar-brand" ui-sref="films") Basic Movie App
+                form(class="navbar-form navbar-right login-form" ng-if="!user")
+                    div(class="form-group")
+                        input(type="text" class="form-control" placeholder="User" ng-model="login.username")
+                        input(type="text" class="form-control" placeholder="Pass" ng-model="login.password")
+                        button(type="submit" class="btn btn-default" ng-click="ctrl.login(login)") Sign In
+
+                div(class="collapse navbar-collapse navbar-ex1-collapse")
+                    ul(class="nav navbar-nav")
+                        li
+                            a(ng-if="user" ui-sref="favourites") My favourites
+                        li
+                            a(ng-if="user" ng-click="ctrl.logOut()" href="#") Log Out
+                           
+        
+        div(class="container")
+            div(class="jumbotron")
+                h1 Let's find your favourite movies!
+                p Introduce some movie title and voilá! You will get results from OMDB. You can pick your favourites movies and check them in your private area. First of all sign in with any random user and pass. Please don't refresh the website and do the navigation just using the links. Thank you and may the force be with you.
+            hr
+
+            div(ui-view)
+
+        script(src='./bower_components/jquery/dist/jquery.min.js')
+        script(src='./bower_components/angular/angular.min.js')
+        script(src='./bower_components/angular-ui-router/release/angular-ui-router.min.js')
+        script(src='./app.js')
+        script(src='./bower_components/bootstrap/dist/js/bootstrap.js')

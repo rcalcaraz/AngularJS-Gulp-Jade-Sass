@@ -1,0 +1,11 @@
+div(ng-controller="FilmDetailController as ctrl")
+    div(class="row")
+        div(class="col-lg-12")
+            a(class="btn btn-primary" ui-sref="films") Go Back
+    div(class="row film-details" ng-if="ctrl.film")
+        div(class="col-xs-12 col-md-2")
+            img(src="{{ctrl.film.poster}}" alt="{{ctrl.film.title}}")
+        div(class="col-xs-12 col-md-10")
+            h1 {{ctrl.film.title}}
+            h3 Type: {{ctrl.film.type}}
+            h3 Year: {{ctrl.film.year}}
