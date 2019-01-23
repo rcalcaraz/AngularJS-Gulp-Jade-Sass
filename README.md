@@ -16,6 +16,7 @@ Aplicación básica con un login simulado para buscar películas y elegir alguna
 
 # Instalación y ejecución
 > npm install
+
 > npm start
 
 Tras instalar las dependencias y arrancar la aplicación se generará una carpeta /dist con los bundles y la compilación generada. La aplicación estará disponible en localhost:3000.
